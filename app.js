@@ -21,7 +21,14 @@ function limpiarCampo() {
 }
 
 function agragarAmigo() {
-    // Falta la implementación para que cada amigo aparezca e la lista.
+    let lista = document.getElementById("listaAmigos");
+    lista.innerHTML = '';
+    let tam = amigos.length;
+    for (let i = 0; i < tam; i++) {
+        let nodo = document.createElement("li");
+        nodo.innerHTML = amigos[i];
+        lista.appendChild(nodo);
+    }
 }
 // Visualizar lista
 
